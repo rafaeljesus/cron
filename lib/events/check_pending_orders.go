@@ -14,6 +14,7 @@ func CheckPendingOrders() {
 
 	if err != nil {
 		log.Fatalf("%s: %s", "failed to publish check.pending.orders message", err)
+		return
 	}
 
 	log.Print("check.pending.orders event message sent")

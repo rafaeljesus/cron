@@ -1,20 +1,26 @@
 package events
 
 import (
-	"github.com/rafaeljesus/cron/lib/queue_manager"
-	"github.com/streadway/amqp"
+	"errors"
+	"github.com/codeship/go-retro"
 	"log"
 )
 
+var ErrNetwork = retro.NewStaticRetryableError(errors.New("error: failed to connect"), 5, 10)
+
 func CheckUnprocessedOrders() {
-	chann := queue_manager.Channel
-	err := chann.Publish("orders", "check_unprocessed", true, false, amqp.Publishing{
-		ContentType: "text/plain",
+	err := retro.DoWithRetry(func() error {
+		return checkRequest()
 	})
 
 	if err != nil {
-		log.Fatalf("%s: %s", "failed to publish check.unprocessed.orders message", err)
+		log.Fatal("Failed to send check.unprocessed.orders request %s\n", err.Error())
+		return
 	}
 
-	log.Print("check.unprocessed.orders event message sent")
+	log.Print("check.unprocessed.orders request sent")
+}
+
+func checkRequest() error {
+	return nil
 }

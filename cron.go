@@ -13,8 +13,8 @@ import (
 func main() {
 	queue_manager.Connect()
 
-	gocron.Every(1).Second().Do(events.CheckPendingOrders)
-	gocron.Every(1).Second().Do(events.CheckUnprocessedOrders)
+	gocron.Every(1).Hour().Do(events.CheckPendingOrders)
+	gocron.Every(1).Hour().Do(events.CheckUnprocessedOrders)
 	gocron.Every(1).Day().Do(events.DownloadFileFromFtpServer)
 
 	<-gocron.Start()
