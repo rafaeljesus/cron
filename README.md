@@ -4,6 +4,10 @@
 * A minimal docker alpine container
 * Automatically pushes it to dockerhub if tests pass
 
+<p align='center'>
+  <img src='https://raw.githubusercontent.com/rafaeljesus/cron/master/architecture.jpg' alt='Cron Service'>
+</p>
+
 ## Contributing
 - Fork it
 - Create your feature branch (`git checkout -b my-new-feature`)
