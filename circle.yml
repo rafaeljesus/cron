@@ -1,0 +1,20 @@
+machine:
+  environment:
+    IMPORT_PATH: "github.com/rafaeljesus/cron"
+  services:
+    - docker
+dependencies:
+  pre:
+    - go get github.com/jasonlvhit/gocron
+    - go get github.com/streadway/amqp
+  override:
+    - mkdir -p "$GOPATH/src/$IMPORT_PATH"
+    - rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
+deployment:
+  master:
+    branch: master
+    commands:
+      - docker build -t rafaeljesus/cron .
+      - docker login -e $DOCKERHUB_EMAIL -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
+      - docker tag rafaeljesus/cron rafaeljesus/cron:master
+      - docker push rafaeljesus/cron:master
