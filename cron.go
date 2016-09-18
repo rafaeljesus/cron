@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/jasonlvhit/gocron"
+	"github.com/rafaeljesus/cron/api/healthz"
 	"github.com/rafaeljesus/cron/lib/events"
-	"github.com/rafaeljesus/cron/lib/healthz"
 	"github.com/rafaeljesus/cron/lib/queue_manager"
 )
 

@@ -1,6 +1,6 @@
 # Cron
 
-* Cron like job scheduler
+* Cron like job scheduler microservice
 * A minimal docker alpine container
 * Automatically pushes it to dockerhub if tests pass
 
@@ -18,6 +18,7 @@
 ## Badges
 
 [![CircleCI](https://circleci.com/gh/rafaeljesus/cron.svg?style=svg)](https://circleci.com/gh/rafaeljesus/cron)
+[![](https://badge.imagelayers.io/rafaeljesus/cron:latest.svg)](https://imagelayers.io/?images=rafaeljesus/cron:latest 'Get your own badge on imagelayers.io')
 
 ---
 

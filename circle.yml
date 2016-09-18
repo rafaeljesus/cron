@@ -1,15 +1,7 @@
 machine:
-  environment:
-    IMPORT_PATH: "github.com/rafaeljesus/cron"
   services:
     - docker
-dependencies:
-  pre:
-    - go get github.com/jasonlvhit/gocron
-    - go get github.com/streadway/amqp
-  override:
-    - mkdir -p "$GOPATH/src/$IMPORT_PATH"
-    - rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
+
 deployment:
   master:
     branch: master
