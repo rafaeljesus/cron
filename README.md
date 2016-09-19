@@ -1,5 +1,7 @@
 # Cron
 
+Code sample from my post in Medium [Designing a Cron Scheduler Microservice](https://medium.com/@_jesus_rafael/designing-a-cron-scheduler-microservice-18a52471d13f#.ao3ouptg5)
+
 * Cron like job scheduler microservice
 * A minimal docker alpine container
 * Automatically pushes it to dockerhub if tests pass
