@@ -20,7 +20,8 @@ Code sample from my post in Medium [Designing a Cron Scheduler Microservice](htt
 ## Badges
 
 [![CircleCI](https://circleci.com/gh/rafaeljesus/cron.svg?style=svg)](https://circleci.com/gh/rafaeljesus/cron)
-[![](https://badge.imagelayers.io/rafaeljesus/cron:latest.svg)](https://imagelayers.io/?images=rafaeljesus/cron:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/rafaeljesus/cron.svg)](https://microbadger.com/images/rafaeljesus/cron "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/rafaeljesus/cron.svg)](https://microbadger.com/images/rafaeljesus/cron "Get your own version badge on microbadger.com")
 
 ---
 
